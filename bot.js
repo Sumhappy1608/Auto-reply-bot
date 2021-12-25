@@ -13,14 +13,14 @@ bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(
       chatId, ` Hello ${msg.chat.username}, this is our information
-    /twitter - twitter link
-    /facebook - facebook link
-    /telegram - our telegram group
-    /github - our github
-    /about - about us
-    /website - our website
-    /whitepaper - our whitepaper
-    /token - token address`
+/twitter - twitter link
+/facebook - facebook link
+/telegram - our telegram group
+/github - our github
+/about - about us
+/website - our website
+/whitepaper - our whitepaper
+/token - token address`
     );
   });
 
@@ -80,7 +80,8 @@ bot.onText(/\/start/, (msg) => {
   });
 
   bot.onText('message', (msg) => {
+    console.log(msg);
     const chatId = msg.chat.id;
     bot.sendMessage(
-      chatId, `Hello ${msg.chat.username}, you can []`);
+      chatId, `Hello ${msg.chat.username}, you can contact with ${process.env.ADMIN} for more information`);
   })
