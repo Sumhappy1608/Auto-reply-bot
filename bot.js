@@ -24,6 +24,22 @@ bot.onText(/\/start/, (msg) => {
     );
   });
 
+  bot.onText(/\/bot/, (msg) => {
+  
+    const chatId = msg.chat.id;
+    bot.sendMessage(
+      chatId, ` Hello, this is our information
+/twitter - twitter link
+/facebook - facebook link
+/telegram - our telegram group
+/github - our github
+/about - about us
+/website - our website
+/whitepaper - our whitepaper
+/token - token address`
+    );
+  });
+
   bot.onText(/\/twitter/, (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(
